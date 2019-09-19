@@ -6,8 +6,13 @@
 /*   By: eboris <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/19 14:05:35 by eboris            #+#    #+#             */
-/*   Updated: 2019/09/19 14:05:40 by eboris           ###   ########.fr       */
+/*   Updated: 2019/09/19 14:32:42 by eboris           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "get_next_line.h"
 
+int	get_next_line(const int fd, char **line)
+{
+	;
+}
