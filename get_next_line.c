@@ -6,7 +6,7 @@
 /*   By: eboris <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/19 14:05:35 by eboris            #+#    #+#             */
-/*   Updated: 2019/09/26 15:04:56 by eboris           ###   ########.fr       */
+/*   Updated: 2019/09/26 18:17:12 by eboris           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -253,7 +253,7 @@ static int		gnl_write_string(char *text, char **line, t_list *list)
 	int		i;
 	int		n;
 
-	if ((text == NULL) || (text[1] == '\0'))
+	if ((text == NULL) || (text[0] == '\0'))
 		return (0);
 	else if (ft_strstr(text, "\n") == NULL)
 	{
@@ -262,12 +262,12 @@ static int		gnl_write_string(char *text, char **line, t_list *list)
 		*line = text;
 		return (1);
 	}
-	temp2 = NULL;
 	i = ft_strlen(ft_strstr(text, "\n"));
 	n = ft_strlen(text);
 	temp = ft_strsub(text, 0, n - i);
 	*line = temp;
 	temp2 = ft_strsub(text, n - i + 1, i - 1);
+	ft_strdel(&text);
 	if ((list->content = ft_memalloc(i)) == NULL)
 		return (-1);
 	list->content = ft_memcpy(list->content, temp2, i);
