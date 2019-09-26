@@ -6,7 +6,7 @@
 /*   By: eboris <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/19 14:05:48 by eboris            #+#    #+#             */
-/*   Updated: 2019/09/19 14:31:53 by eboris           ###   ########.fr       */
+/*   Updated: 2019/09/26 15:06:47 by eboris           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <unistd.h>
 # include "libft.h"
 
-# define BUFF_SIZE 32
+# define BUFF_SIZE 1000
 
-int	get_next_line(const int fd, char **line);
+int					get_next_line(const int fd, char **line);
 #endif
